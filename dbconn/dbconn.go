@@ -11,10 +11,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/greenplum-db/gp-common-go-libs/gplog"
-	"github.com/greenplum-db/gp-common-go-libs/operating"
+	"github.com/adam8157/gp-common-go-libs/gplog"
+	"github.com/adam8157/gp-common-go-libs/operating"
+	_ "github.com/greenplum-db/gp-golang-libpq/pq" // Need driver for postgres
 	"github.com/jmoiron/sqlx"
-	_ "github.com/lib/pq" // Need driver for postgres
 	"github.com/pkg/errors"
 )
 
@@ -189,7 +189,7 @@ func (dbconn *DBConn) Connect(numConns int) error {
 	}
 	dbname := EscapeConnectionParam(dbconn.DBName)
 	user := EscapeConnectionParam(dbconn.User)
-	connStr := fmt.Sprintf(`user='%s' dbname='%s' host=%s port=%d sslmode=disable`, user, dbname, dbconn.Host, dbconn.Port)
+	connStr := fmt.Sprintf(`user='%s' dbname='%s' krbsrvname=postgres host=%s port=%d sslmode=disable`, user, dbname, dbconn.Host, dbconn.Port)
 	dbconn.ConnPool = make([]*sqlx.DB, numConns)
 	for i := 0; i < numConns; i++ {
 		conn, err := dbconn.Driver.Connect("postgres", connStr)

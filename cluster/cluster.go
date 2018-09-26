@@ -11,9 +11,9 @@ import (
 	"os/exec"
 	"strings"
 
-	"github.com/greenplum-db/gp-common-go-libs/dbconn"
-	"github.com/greenplum-db/gp-common-go-libs/gplog"
-	"github.com/greenplum-db/gp-common-go-libs/operating"
+	"github.com/adam8157/gp-common-go-libs/dbconn"
+	"github.com/adam8157/gp-common-go-libs/gplog"
+	"github.com/adam8157/gp-common-go-libs/operating"
 	"github.com/pkg/errors"
 )
 

@@ -7,9 +7,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/greenplum-db/gp-common-go-libs/dbconn"
-	"github.com/greenplum-db/gp-common-go-libs/operating"
-	"github.com/greenplum-db/gp-common-go-libs/testhelper"
+	"github.com/adam8157/gp-common-go-libs/dbconn"
+	"github.com/adam8157/gp-common-go-libs/operating"
+	"github.com/adam8157/gp-common-go-libs/testhelper"
 	sqlmock "gopkg.in/DATA-DOG/go-sqlmock.v1"
 
 	"github.com/jmoiron/sqlx"

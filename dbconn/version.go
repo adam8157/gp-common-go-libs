@@ -5,7 +5,7 @@ import (
 	"strings"
 
 	"github.com/blang/semver"
-	"github.com/greenplum-db/gp-common-go-libs/gplog"
+	"github.com/adam8157/gp-common-go-libs/gplog"
 )
 
 type GPDBVersion struct {

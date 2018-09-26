@@ -2,7 +2,7 @@ package dbconn_test
 
 import (
 	"github.com/blang/semver"
-	"github.com/greenplum-db/gp-common-go-libs/dbconn"
+	"github.com/adam8157/gp-common-go-libs/dbconn"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
