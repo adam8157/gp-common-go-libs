@@ -189,7 +189,11 @@ func (dbconn *DBConn) Connect(numConns int) error {
 	}
 	dbname := EscapeConnectionParam(dbconn.DBName)
 	user := EscapeConnectionParam(dbconn.User)
-	connStr := fmt.Sprintf(`user='%s' dbname='%s' krbsrvname=postgres host=%s port=%d sslmode=disable`, user, dbname, dbconn.Host, dbconn.Port)
+	krbsrvname := operating.System.Getenv("PGKRBSRVNAME")
+	if krbsrvname == "" {
+		krbsrvname = "postgres"
+	}
+	connStr := fmt.Sprintf(`user='%s' dbname='%s' krbsrvname='%s' host=%s port=%d sslmode=disable`, user, dbname, krbsrvname, dbconn.Host, dbconn.Port)
 	dbconn.ConnPool = make([]*sqlx.DB, numConns)
 	for i := 0; i < numConns; i++ {
 		conn, err := dbconn.Driver.Connect("postgres", connStr)
