@@ -10,8 +10,8 @@
   version = "v3.5.1"
 
 [[projects]]
-  branch = "master"
-  digest = "1:6279c365701e5da1ac8250c0c0a23c8dc5d9bf87f79bf4ebd7c670d23c4a338d"
+  branch = "rebase_pq"
+  digest = "1:7b2d94c12aec74b4b0bd90f4f7fe8269a00635697d50db021bef58c5256227c4"
   name = "github.com/greenplum-db/gp-golang-libpq"
   packages = [
     "gssapi",
@@ -19,7 +19,7 @@
     "pq/oid",
   ]
   pruneopts = "UT"
-  revision = "ba4f45edf648a9695abfa12b825edb7f0c8c0011"
+  revision = "1563c58774069c27b57b69d99b2d5c8313e05874"
 
 [[projects]]
   branch = "master"
@@ -31,17 +31,6 @@
   ]
   pruneopts = "UT"
   revision = "2aeb6a910c2b94f2d5eb53d9895d80e27264ec41"
-
-[[projects]]
-  digest = "1:8ef506fc2bb9ced9b151dafa592d4046063d744c646c1bbe801982ce87e4bc24"
-  name = "github.com/lib/pq"
-  packages = [
-    ".",
-    "oid",
-  ]
-  pruneopts = "UT"
-  revision = "4ded0e9383f75c197b3a2aaa6d590ac52df6fd79"
-  version = "v1.0.0"
 
 [[projects]]
   digest = "1:a07caa164b5a159fd3aa419a82ce0eadaff55a7aef202e62253f2fc927cbee1f"

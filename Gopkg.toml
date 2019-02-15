@@ -34,6 +34,10 @@ required = ["golang.org/x/tools/cmd/goimports", "github.com/onsi/ginkgo/ginkgo"]
   name = "github.com/onsi/gomega"
   version = "1.3.0"
 
+[[constraint]]
+  name = "github.com/greenplum-db/gp-golang-libpq"
+  branch = "rebase_pq"
+
 [prune]
   go-tests = true
   unused-packages = true
